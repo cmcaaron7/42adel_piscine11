@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: munchang <munchang@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/04 19:29:32 by munchang          #+#    #+#             */
-/*   Updated: 2025/02/15 18:09:57 by munchang         ###   ########.fr       */
+/*   Created: 2025/02/05 16:18:18 by munchang          #+#    #+#             */
+/*   Updated: 2025/02/15 18:09:26 by munchang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_str_is_alpha(char *str)
+int	ft_str_is_numeric(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')))
+		if (str[i] < '0' || str[i] > '9')
 		{
 			return (0);
 		}
@@ -30,11 +30,9 @@ int	ft_str_is_alpha(char *str)
 /*
 int	main(void)
 {
-	int	output;
-	char	*message;
+	char	*val;
 
-	message = "hello";
-	output = ft_str_is_alpha(message);
-	printf("%d\n", output);
+	val = "xdg";
+	printf("%d\n", ft_str_is_numeric(val));
 }
 */

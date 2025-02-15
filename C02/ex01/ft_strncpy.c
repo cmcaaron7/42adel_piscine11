@@ -6,7 +6,7 @@
 /*   By: munchang <munchang@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 19:18:37 by munchang          #+#    #+#             */
-/*   Updated: 2025/02/04 19:20:45 by munchang         ###   ########.fr       */
+/*   Updated: 2025/02/15 18:24:57 by munchang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[i] = '\0';
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }
 /*
 int	main(void)
 {
-	char source[] = "This is String Copy!";
+	char	dest[] = "######";
+	char	src[] = "This is String Copy!";
+	int	n = 2;
 
-	char destination[20];
-	ft_strncpy(destination, source, 20);
-
-	printf("%s\n", destination);
+	printf("dest before: %s\n", dest);
+	ft_strncpy(dest, src, n);
+	printf("dest after: %s\n", dest);
 	return (0);
 }
 */

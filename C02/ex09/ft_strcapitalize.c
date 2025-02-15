@@ -6,7 +6,7 @@
 /*   By: munchang <munchang@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 17:41:14 by munchang          #+#    #+#             */
-/*   Updated: 2025/02/15 18:04:25 by munchang         ###   ########.fr       */
+/*   Updated: 2025/02/15 21:08:16 by munchang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ char	*ft_strcapitalize(char *str)
 	while (str[i] != '\0')
 	{
 		if (!((str[i] >= '0' && str[i] <= '9')
-			|| (str[i] >= 'a' && str[i] <= 'z')
-			|| (str[i] >= 'A' && str[i] <= 'Z')))
+				|| (str[i] >= 'a' && str[i] <= 'z')
+				|| (str[i] >= 'A' && str[i] <= 'Z')))
 		{
 			if (str[i + 1] != '\0' && str[i + 1] >= 'a' && str[i + 1] <= 'z')
 			{
@@ -49,7 +49,7 @@ char	*ft_strcapitalize(char *str)
 		}
 		i++;
 	}
-	return(str);
+	return (str);
 }
 /*
 int	main(void)

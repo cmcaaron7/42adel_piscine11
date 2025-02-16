@@ -6,7 +6,7 @@
 /*   By: munchang <munchang@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 16:40:02 by munchang          #+#    #+#             */
-/*   Updated: 2025/02/15 18:07:22 by munchang         ###   ########.fr       */
+/*   Updated: 2025/02/16 11:31:03 by munchang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,18 @@ int	ft_str_is_printable(char *str)
 	int	i;
 
 	i = 0;
+	if (str[0] == '\0')
+		return (1);
 	while (str[i] != '\0')
 	{
-		if (str[i] <= 32 || str[i] >= 126)
+		if (str[i] >= 32 && str[i] < 127)
+		{
+			i++;
+		}
+		else
 		{
 			return (0);
 		}
-		i++;
 	}
 	return (1);
 }

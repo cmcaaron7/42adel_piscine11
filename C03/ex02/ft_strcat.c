@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: munchang <munchang@student.42adel.orgi.au> +#+  +:+       +#+        */
+/*   By: munchang <munchang@student.42adel.org.au>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/15 19:43:15 by munchang          #+#    #+#             */
-/*   Updated: 2025/02/16 11:52:45 by munchang         ###   ########.fr       */
+/*   Created: 2025/02/16 12:13:11 by munchang          #+#    #+#             */
+/*   Updated: 2025/02/16 12:33:34 by munchang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	while (s1[i] && (s1[i] == s2[i]))
+	j = 0;
+	while (dest[i] != '\0')
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 /*
 int	main(void)
 {
-	printf("%i", ft_strcmp("test", "test") );
+	char	dest[20] = "Howdy, ";
+	char	*src = "Partner!";
+
+	printf("%s", ft_strcat(dest, src));
 }
 */
